@@ -23,6 +23,7 @@ build:
 
 requirements:
   build:
+    - {{ compiler('cxx') }}
     - r-base
     - r-rjsonio >=0.8_2
     - r-rcpp
@@ -45,7 +46,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('rmr2')"  # [not win]
+    - $R -e "library('rmr2')"           # [not win]
     - "\"%R%\" -e \"library('rmr2')\""  # [win]
 
 about:
@@ -56,5 +57,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
     - bgruening
+    - johanneskoester
+    - mingwandroid
