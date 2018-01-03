@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('cxx') }}  # [not win]
     - {{native}}toolchain    # [win]
     - posix                  # [win]
+  host:
     - r-base
     - r-rjsonio >=0.8_2
     - r-rcpp
